@@ -85,10 +85,14 @@ class PyQueueRunner(object):
 
     @property
     def queue(self):
+        """"""
+        
         return self._queue
 
     @property
     def enqueue_ops(self):
+        """"""
+        
         return self._enqueue_ops
 
     # pylint: disable=broad-except
@@ -163,6 +167,8 @@ class PyQueueRunner(object):
 
 
 def identity(x):
+    """"""
+    
     return x
 
 
