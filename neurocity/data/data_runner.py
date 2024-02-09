@@ -200,7 +200,7 @@ def run_py2tf_queue(py_queue_or_deque_op, dtypes, shapes=None, names=None, trans
     if names is not None:
         names = nest.flatten(names)
 
-    assert all([isinstance(dt, (type, tf.DType)) for dt in dtypes]), \
+    assert all(isinstance(dt, (type, tf.DType)) for dt in dtypes), \
         'Invalid dtypes, each type(dtype) must be in (type, tf.Dtype)'
 
     queue_shapes = shapes if shapes is not None and all(nest.flatten(shapes)) else None
